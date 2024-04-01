@@ -41,6 +41,8 @@ java.lang.Object
 
 `Set` 자료구조와 관련된 관계를 그림으로 나타내면 다음과 같다.
 
+<!-- Java_Set_Diagram.png -->
+
 <p align="center">
     <img src="../../images/ch_05/Java_Set_Diagram.png", width=70%, height=70%>
 </p>
@@ -96,12 +98,64 @@ java.lang.Object
 |---|---|
 |`boolean add(E e)`|`E` 타입 원소를 추가한다. 원소가 중복되지 않아 새롭게 추가되었으면 `true`, 그렇지 않으면 `false` 를 반환한다.|
 |`void clear()`|현 `HashSet` 에 포함되는 모든 원소를 삭제한다.|
-|`Object clone()`|   |
-|`boolean contains(Object o)`|   |
-|`boolean isEmpty()`|   |
-|`Iterator<E> iterator()`|   |
-|`boolean remove(Object o)`|   |
-|`int size()`|   |
+|`Object clone()`|현 `HashSet` 에 포함되는 모든 원소를 가진 새로운 `HashSet` 을 만들어 반환한다. 이 때, `HashSet` 클래스는 새롭게 만들어지지만, 내부의 원소들은 오직 참조된다. `(shallow copy)`|
+|`boolean contains(Object o)`|주어진 객체와 `동등한` 원소가 존재하는지 확인한다.|
+|`boolean isEmpty()`|현 `HashSet` 이 비어있는지 확인한다.|
+|`Iterator<E> iterator()`|원소를 꺼내기 위한 `java.util.Iterator` `interface` 형 객체를 반환한다.|
+|`boolean remove(Object o)`|현 `HashSet` 에서 주어진 객체와 `동등한` 원소를 삭제한다. 연산으로 인해 `HashSet` 이 변화했으면 `true`, 그렇지 않다면 `false` 를 반환한다.|
+|`int size()`|현 `HashSet` 에 저장된 원소의 개수를 반환한다.|
+
+더불어 `HashSet` 도 이전 `ArrayList` 에서 처럼 `향상된 for 문` 을 이용할 수 있다.
+
+```java
+import java.util.HashSet;
+
+void showProperties(Object obj) {
+    System.out.printf(
+        "%s\t\t%s\t%s\n",
+        obj.getClass(),
+        String.format("0x%08x", obj.hashCode()),
+        String.format("0x%08x", System.identityHashCode(obj))
+    );
+}
+
+void showProperties(Object[] objs) {
+    System.out.println("Class\t\t\t\thashCode\tidentityhashCode");
+    for (Object obj : objs)
+    showProperties(obj);
+}
+
+HashSet<Integer> origin = new HashSet<>();
+for (int i = 3; i > 0; i--)     origin.add(i);
+
+HashSet<Integer> clone = (HashSet<Integer>) origin.clone();
+
+showProperties(new Object[] {origin, clone});    System.out.println();
+
+System.out.println("Element from origin : ");
+for (Integer element : origin)
+showProperties(element);        System.out.println();
+
+System.out.println("Element from clone : ");
+for (Integer element : clone)
+showProperties(element);        System.out.println();
+```
+```
+Class                           hashCode        identityhashCode
+class java.util.HashSet         0x00000006      0x3af49f1c
+class java.util.HashSet         0x00000006      0x19469ea2
+
+Element from origin :
+class java.lang.Integer         0x00000001      0x13221655
+class java.lang.Integer         0x00000002      0x2f2c9b19
+class java.lang.Integer         0x00000003      0x31befd9f
+
+Element from clone :
+class java.lang.Integer         0x00000001      0x13221655
+class java.lang.Integer         0x00000002      0x2f2c9b19
+class java.lang.Integer         0x00000003      0x31befd9f
+```
+
 
 
 ---
