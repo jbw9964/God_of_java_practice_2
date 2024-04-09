@@ -194,8 +194,32 @@ class java.lang.Object          0x58644d46      0x58644d46
 
 ### `2. Map 을 구현한 주요 클래스들을 살펴보자`
 
+`Map` `interface` 를 구현한 클래스는 매우 다양하다. 그 중 `HashMap`, `TreeMap`, `LinkedHashMap` 이 많이 쓰인다.
 
+특히 이전 [`(CH 5.1)`](../ch_05/section_01_04.md#1--자바-java---linked-hash-set-연결-해시-셋-구현하기) 에서 `TreeSet` 은 `RB Tree` 자료구조를 사용한다 하였다. 사실 `TreeSet` 은 이 중 `TreeMap` 에 기반해 만들어졌고, 때문에 `TreeMap` 또한 `RB Tree` 를 이용한다.
 
+이에 더불에 `Hashtable` 이란 클래스도 존재하는데, 이는 일반적인 `Map` `interface` 를 구현한 클래스들과 다르다. 교재에서는 이 차이를 다음과 같이 설명한다.
+
+- `Map` 은 `Collection View` 를 이용하지만, `Hashtable` 은 `Enumeration` 객체를 통해 데이터를 처리한다.
+- `Map` 은 `key`, `value`, `key-value` 쌍으로 데이터를 순환해 처리할 수 있지만, `Hashtable` 은 이 중 `key-value` 쌍으로 데이터를 순환해 처리할 수 없다.
+- `Map` 은 `interation` 을 처리하는 도중 데이터를 삭제하는 안전한 방법을 제공하지만, `Hashtable` 은 제공하지 않는다.
+
+또한 `Map` 을 구현한 `HashMap` 과 `Hashtable` 은 다음과 같은 차이점을 지닌다.
+
+|`feature`|`HashMap`|`Hashtable`|
+|---|:---:|:---:|
+|`key` 또는 `value` 에 `null` 저장 가능|`YES`|`NO`|
+|`Thread Safe`|`NO`|`YES`|
+
+`HashMap` 과 `Hashtable` 의 자세한 차이점은 [`[2]`](#2--what-are-the-differences-between-a-hashmap-and-a-hashtable-in-java---stackoverflow) 를 참고하면 좋을 듯 하다.
+
+이 처럼 `Hashtable` 클래스가 다른 이들과 차이나는 이유는 `Java` 가 지속적으로 개발되었기 때문이다.
+
+사실 우리가 이전에 배웠던 `Set`, `List`, 심지어 `Map` `interface` 는 `JDK 1.2` 부터 추가되었다. 왜냐면 `Java` 의 핵심 `framework` 중 하나인 `Collection Framework` 가 `JDK 1.2` 부터 추가되었기 때문이다.
+
+하지만 `Hashtable` 클래스는 `JDK 1.0` 부터 존재한 클래스이다. 버전이 상향되면 `Map` `interface` 를 구현하도록 바뀌었지만 핵심은 `오래된 코드` `(legacy code)` 라는 것이다.
+
+때문에 `Hashtable` 클래스는 이전 접했던 클래스와 조금 차이가 존재하는 것이다.
 
 ---
 
@@ -203,5 +227,6 @@ class java.lang.Object          0x58644d46      0x58644d46
 
 - ##### [`[1] : java.util : Interface Map.Entry<K,V> - Oracle Docs`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.Entry.html)
 
+- ##### [`[2] : What are the differences between a HashMap and a Hashtable in Java? - StackOverflow`](https://stackoverflow.com/questions/40471/what-are-the-differences-between-a-hashmap-and-a-hashtable-in-java)
 
 ---
