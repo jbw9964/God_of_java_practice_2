@@ -43,7 +43,7 @@ public void printStatistics() {
 - 이처럼 순서가 보장되는 것 처럼 보이는 이유는 `hash` 자료구조가 작동하는 원리와 관계되어 있습니다. `Java` 에서 `hash` 자료구조는 `Object.hashCode` 메서드를 이용해 `hash 값` 을 생성하는데, `Integer` 클래스의 `hashCode` 메서드는 [`"아주 단순하게"`](https://github.com/openjdk/jdk/blob/a48289ac30a6a9ddc9941676726d105b11689ab3/src/java.base/share/classes/java/lang/Integer.java#L1144-L1160) `(Integer 클래스에 지정된 int 값을 그대로 hash 로 이용)` `hash 값` 을 생성합니다.
 - 또한 `hash` 자료구조는 `(hash 값) % (bucket 의 크기)` 로 데이터가 저장될 `bucket 의 index` 를 결정합니다.
 - 따라서 숫자 `1`, `2`, `3`, ... 이 `key` 로 삽입될 시, `1` 은 `bucket index 1` 으로, `2` 는 `bucket index 2` 로 지정되 순서가 지켜지는 것 처럼 보이는 것입니다.
-- 하지만 이는 이전 삽입된 수와 `동 떨어진` 수 `(예를 들어 100)` 을 삽입해 확인하면, 순서가 지켜지지 않는 것을 손쉽게 확인할 수 있습니다.
+- 하지만 이는 이전 삽입된 수들과 동 떨어진 수 `(예를 들어 100)` 을 삽입해 확인하면, 순서가 지켜지지 않는 것을 손쉽게 확인할 수 있습니다.
 - 마지막으로 `HashMap` 과 `Hashtable` 내 원소의 순서는 API 에 명시되지 않았으며 `JVM` 에 따라 다를 수 있습니다.
 
 정리하자면 정렬되서 나오는 것은 `"Hashtable 내부 동작으로 인한 우연의 일치"` 일 뿐, 정말로 정렬된 것이 아니라는 것이다.
@@ -59,8 +59,5 @@ public void printStatistics() {
 
 - ##### [`[3] : Java HashMap<Integer, ...> keyset() iterating in sorted order [duplicate]`](https://stackoverflow.com/questions/49038495/java-hashmapinteger-keyset-iterating-in-sorted-order)
     - No particular order is guaranteed for the `HashMaps` and `HashSets`, period. You may derange your order by removing and adding some elements.
-
-
-
 
 ---

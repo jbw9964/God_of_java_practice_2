@@ -66,6 +66,8 @@ java.lang.Object
 
 `LinkedList` 의 메서드는 중복되는 기능이 많다. 그래서 `offerFirst`, `push` 등의 메서드는 내부적으로 `addFirst` 을 호출한다. 
 
+---
+
 </details>
 
 <details><summary> 원소를 꺼내는 메서드</summary>
@@ -84,6 +86,8 @@ java.lang.Object
 |`E peekLast()`|`(중복)`|
 |`E get(int index)`|`LinkedList` 의 특정 `index` 에 위치한 원소를 `pop` 한다.|
 
+---
+
 </details>
 
 <details><summary> 특정 원소가 존재하는지 확인하는 메서드</summary>
@@ -97,6 +101,8 @@ java.lang.Object
 |`boolean contains(Object o)`|주어진 객체와 `동등한` 원소가 있을 시 `ture` 를 반환한다.|
 |`int indexOf(Object o)`|주어진 객체와 `동등한` 원소가 있을 시, 그러한 원소 중 가장 `head` 에 가까운 원소의 `index` 를 반환한다. 만약 존재하지 않을 시, `-1` 을 반환한다.|
 |`int lastIndexOf(Object o)`|주어진 객체와 `동등한` 원소가 있을 시, 그러한 원소 중 가장 `tail` 에 까가운 원소의 `index` 를 반환한다. 만약 존재하지 않을 시, `-1` 을 반환한다.|
+
+---
 
 </details>
 
@@ -120,6 +126,7 @@ java.lang.Object
 |`boolean removeFirstOccurrence(Object o)`|`LinkedList` 의 원소 중 주어진 객체와 `동등한` 원소 중 `head` 에 가장 가까운 원소를 삭제한다. 이 때 주어진 객체가 존재했었으면 `true`, 그렇지 않다면 `false` 를 반환한다.|
 |`boolean removeLastOccurrence(Object o)`|`LinkedList` 의 원소 중 주어진 객체와 `동등한` 원소 중 `tail` 에 가장 가까운 원소를 삭제한다. 이 때 주어진 객체가 존재했었으면 `true`, 그렇지 않다면 `false` 를 반환한다.|
 
+---
 
 </details>
 

@@ -22,6 +22,8 @@
 
 <details><summary> System.getProperties 예시</summary>
 
+---
+
 ```java
 import java.util.Map;
 import java.util.Properties;
@@ -89,6 +91,8 @@ socksNonProxyHosts              : local|*.local|169.254/16|*.169.254/16|lx.astxs
 java.class.version              : 65.0
 ```
 
+---
+
 </details>
 
 시스템 속성은 여러가지가 있지만, 그 중 개발하며 많이 사용될 수 있는 속성은 다음과 같다.
@@ -120,6 +124,8 @@ java.class.version              : 65.0
 |`void storeToXML(OutputStream out, String comment, String encoding)`|현 `Properties` 에 저장된 속성들을 나타내는 `XML` 문서를 주어진 `encoding` 으로 내보낸다.|
 
 <details><summary> store, load 사용 예시</summary>
+
+---
 
 ```java
 import java.util.Map;

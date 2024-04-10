@@ -19,7 +19,7 @@
 
 `Java` 의 자료구조는 `Collection` `interface` 를 `implements` 하여 만들어 진 것이 많다. `Set`, `List`, `Queue` 형 자료구조가 그러하다.
 
-또한 책에서는 별로 온급하지 않았지만 `Java` 의 자료구조는 `단계적인 추상화` 가 아주 잘 이루어 진 것으로 보인다. `Collection` 을 `implements` 한 `AbstractCollection` 클래스가 존재하고, 이를 상속하며 `List` `interface` 를 `implements` 한 `AbstractList` 클래스가 존재하기 때문이다.
+또한 책에서는 별로 언급하지 않았지만 `Java` 의 자료구조는 `단계적인 추상화` 가 아주 잘 이루어 진 것으로 보인다. `Collection` 을 `implements` 한 `AbstractCollection` 클래스가 존재하고, 이를 상속하며 `List` `interface` 를 `implements` 한 `AbstractList` 클래스가 존재하기 때문이다.
 
 다만 한가지 아쉬운 점이 있는데, 교재에서 자료구조를 직접 구현하거나 하지 않고 그냥 사용하는 방법만 알려준 점이다. 직접 `AbstractList` 클래스를 상속해 자료구조를 만들었다면 훨씬 유익할텐데 좀 아쉬웠다.
 

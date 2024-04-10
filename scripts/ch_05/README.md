@@ -13,10 +13,10 @@
 
 ### What I learned from this chapter
 
-이번 챕터에서는 `HashSet` 과 `LinkedList` 클래스에 대해 알아보았지만 교재의 내용이 너무나 상당히 아쉬웠다.
+이번 챕터에서는 `HashSet` 과 `LinkedList` 클래스에 대해 알아보았지만 교재의 내용이 너무나 아쉬웠다.
 
-맨 처음 교재에서 `Set<E>` `interface` 는 `HashSet`, `TreeSet`, `LinkedHashSet` 클래스에서 `implements` 된다 언급하였다.
-하지만 이 중 `HashSet` 에 대해서만 설명하고, 그것도 그냥 메서드들 사용법만 설명하였다.
+맨 처음 교재에서 `Set<E>` 는 `HashSet`, `TreeSet`, `LinkedHashSet` 클래스에서 구현된다 하였다.
+하지만 이 중 `HashSet` 만 설명하고, 그것도 그냥 메서드 사용법만 설명하였다.
 
 더욱 충격적인 것은 `Queue` 를 알아본다 하면서 `LinkedList` 만 언급하고 `PriorityQueue` 같은 자료구조를 일절 언급하지 않은 점이다.
 

@@ -67,7 +67,7 @@ new ArrayList<String>().add((double) 5);
 
 공식 API 에 의하면 `ArrayList` 에 원소가 추가될 때마다 용량이 확장될 수 있는데, 그 확장 정책의 세부 사항은 `"원소를 추가할 때 일정한 시간 비용이 추가로 발생한다는 사실 외 지정하지 않는다"` 라고 되어있다. [`[1]`](#javautil--class-arrayliste---oracle-docs)
 
-그래서 만약 문제 상황에서 데이터의 크기가 어느 정도 예측 가증하다면 예측한 초기 크기 만큼 크기를 지정하는게 현명할 수 있다.
+때문에 만약 문제 상황의 데이터 크기가 어느 정도 예측 가능하다면, 예측한 크기 만큼 미리 용량을 설정하는게 현명할 수 있다.
 `(지정하지 않으면 용량을 확장하는데 시간이 걸려 성능에 영향을 미치기 때문)`
 
 ---
@@ -224,7 +224,7 @@ Array 3 : 0 1 2 3 4 5 6 7 8 9 null null null null null null null null null null
 
 먼저 `arrayLength5 & toArray1` 의 경우를 보자. 초기 `ArrayList` 내 원소의 개수는 `10` 개 이다. 하지만 `arrayLength5` 는 크기 `5` 의 배열이므로 이들을 다 담지 못한다.
 그래서 해당 상황에서는 원소 개수만큼 크기를 갖는 새로운 배열을 생성한다.
-이 때문에 `arrayLength5` 와 `toArray1` 의 `identityHashCode` 가 다른, 둘이 서로 다른 객체임을 확인할 수 있다.
+이 때문에 `arrayLength5` 와 `toArray1` 의 `identityHashCode` 가 다른, 즉 서로 다른 객체임을 확인할 수 있다.
 
 반면 `arrayLength20 & toArray3` 의 경우, `arrayLength20` 의 공간이 충분하다. 때문에 해당 상황에서는 새로운 배열을 생성하지 않고 `arrayLength20` 에 원소를 담아 반환한다. 그래서 `arrayLength20` 와 `toArray3` 의 `identityHashCode` 가 동일한 것을 볼 수 있다.
 
@@ -244,7 +244,7 @@ Integer[] array = new ArrayList<Integer>().toArray(new Integer[0]);
 
 ### `7. ArrayList 에 있는 데이터를 삭제하자`
 
-이번에 `ArrayList` 에서 원소를 제거하는 메서드를 알아보자.
+아래의 메서드는 `ArrayList` 에서 원소를 제거하는 메서드이다.
 
 |`Method`|`Description`|
 |---|---|
@@ -253,6 +253,8 @@ Integer[] array = new ArrayList<Integer>().toArray(new Integer[0]);
 |`boolean remove(Object o)`|제시된 객체와 `동등한` 원소를 제거한다. 해당하는 원소가 존재해 삭제가 이루어졌다면 `true`, 그렇지 않다면 `false` 를 반환한다. 또한 다수의 원소가 제시된 객체와 동등하다면, 가장 첫 번째 원소만 제거한다.|
 |`boolean removeAll(Collection<?> c)`|현재 `list` 의 원소 중 컬렉션의 원소와 동일한 것들을 모두 삭제한다. 현 `list` 에서 삭제가 이루어졌다면 `true`, 그렇지 않다면 `false` 를 반홚한다. 이 때 `list` 에 동등한 원소들이 다수 존재하고, 해당 원소가 컬렉션에 제시되었을 시, 중복되는 모든 원소들을 삭제한다.|
 |`E set(int index, E element)`|지정된 `index` 의 원소를 `element` 로 교체하고, 원래의 원소를 반환한다.|
+
+메서드 이름만으로 기능을 충분히 알 수 있어 설명은 생략하겠다. 
 
 ---
 

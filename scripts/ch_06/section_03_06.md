@@ -32,7 +32,7 @@
 
 조금 더 자세히 말하면 `HashMap` 은 `key-value` 를 이용해 값을 저장하고, `HashSet` 은 주어진 원소를 `key` 로 갖으며 `"dummy value"` 를 `value` 로 갖는 `Map` 을 내부적으로 사용한다. `(직접 확인해보니 생성자에 따라 HashMap 으로 이용하기도, LinkedHashMap 으로 이용하기도 한다)`
 
-`HashMap` 의 `key` 는 여러 타입이 될 수 있다. `(generic 이므로)` 기본 자료형의 `Wrapper Class`, 참조 자료형, 심지어 직접 만든 클래스 또한 가능하다.
+`HashMap` 의 `key` 는 여러 타입이 될 수 있다. `(generic 이므로)` 기본 자료형의 `Wrapper Class`, 참조 자료형, 심지어 직접 만든 클래스와 `null` 또한 가능하다.
 
 하지만 직접 만든 클래스를 이용할 경우, 해당 클래스의 `hashCode()`, `equals()` 메서드를 **잘** 구현해 놓아야 한다. `HashMap` 에서 원소를 저장할 때 이들을 이용하기 때문이다.
 
@@ -113,7 +113,7 @@ third=0 first=0 second=0
 
 `Comparator<T>` `interface` 에는 `compare` 메서드가 존재하는데, 이는 이전 `Comparable<T>` `interface` 의 `compareTo` 추상 메서드와 유사하다.
 
-[`(compareTo 메서드는 (VOL.1 : CH 15) 에서 언급한 적이 있다.)`]((https://github.com/jbw9964/God_of_java_practice/tree/post/scripts/ch_15))
+[`(compareTo 메서드는 (VOL.1 : CH 15) 에서 언급한 적이 있다.)`](https://github.com/jbw9964/God_of_java_practice/tree/post/scripts/ch_15)
 
 `int compare(T o1, T o2)` 메서드는 `o1` 과 `o2` 의 순서를 매기기 위한 추상 메서드로, `TreeMap` 생성자에 사용되는 `Comparator` 는 이가 구현되어 있어야 한다.
 
