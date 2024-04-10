@@ -13,11 +13,12 @@
 
 `Java` 의 자료구조는 크게 4 가지 종류가 있다.
 
-- `List` 형, `Set` 형, `Queue` 형, `Map` 형
-    - 순서가 있는 `List` `(목록)` 형
-    - 순서가 중요하지 않은 `Set` 형
-    - `FIFO` 규칙을 지키는 `Queue` 형
-    - `key-value` 로 저장되는 `Map` 형
+|`Type`|`Description`|
+|---|---|
+|`List 형`|순서가 있는 `List` `(목록)` 형|
+|`Set 형`|순서가 중요하지 않은 `Set` 형|
+|`Queue 형`|`FIFO` 규칙을 지키는 `Queue` 형|
+|`Map 형`|`key-value` 로 저장되는 `Map` 형|
 
 
 이들은 모두 `java.util` `package` 에 선언되어 있다. 특히 `List`, `Set`, `Queue`, `Map` 은 모두 `interface` 로 선언되어 있으며, `Map` 을 제외하고 `java.util.Collection` 이라는 `interface` 를 `implements` 한다.
