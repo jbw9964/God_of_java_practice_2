@@ -23,7 +23,7 @@
 
 `(Java 의 generic 과 C++ 템플릿의 차이를 정확히 적고 싶었으나 내용이 방대하고 모르는 점이 많아 간략하게만 적었다...)`
 
-[`(Java 의 generic 에 관한 자세한 내용은 The Java™ Tutorials 을 읽어보는 게 좋을 듯 하다.)`](#1--generics---the-java™-tutorials)
+[`(Java 의 generic 에 관한 자세한 내용은 The Java™ Tutorials 을 읽어보는 게 좋을 듯 하다 : [1])`](#1--generics---the-java™-tutorials)
 
 ---
 
