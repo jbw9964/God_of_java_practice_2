@@ -363,3 +363,5 @@ $ java -client -Xms512m program
 ### Reference
 
 - ##### [`[1] : Java Garbage Collection Basics - Oracle Technetwork Tutorial`](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/gc01/index.html)
+
+---

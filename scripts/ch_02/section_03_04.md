@@ -141,3 +141,5 @@ System.out.println(obj);    // no Exception occurs
 - ##### [`[1] : System.out is declared as static final and initialized with null? [duplicate] - StackOverflow`](https://stackoverflow.com/questions/31743760/system-out-is-declared-as-static-final-and-initialized-with-null)
 
 - ##### [`[2] : java.lang.System, getProperties - Oracle Docs`](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/System.html#getProperties())
+
+---
