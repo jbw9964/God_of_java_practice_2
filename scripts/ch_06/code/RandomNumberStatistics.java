@@ -13,13 +13,13 @@ interface RequiredMethods {
 abstract class Requirement implements RequiredMethods {
     protected static final int DATA_BOUNDARY = 50;
     protected Hashtable<Integer, Integer> hashtable = new Hashtable<>();
+    protected static final Random Rand = new Random();
 
     protected void getRandomNumberStatistics(int iter) {
-        Random rand = new Random();
         iter = iter < 0 ? -iter : iter;
         
         for (int count = 0; count < iter; count++)
-        putCurrentNumber(rand.nextInt(1, DATA_BOUNDARY + 1));
+        putCurrentNumber(Rand.nextInt(1, DATA_BOUNDARY + 1));
     }
 
     @Override
@@ -39,7 +39,7 @@ abstract class Requirement implements RequiredMethods {
             int key = keySet.pollLast();
 
             System.out.printf(
-                "%2d:%3d\t", key, hashtable.get(key)
+                "%2d:%3d\t\t", key, hashtable.get(key)
             );
             count++;
 

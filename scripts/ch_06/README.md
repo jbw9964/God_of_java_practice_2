@@ -8,15 +8,18 @@
 - [`5. HashMap 객체의 값을 확인하는 다른 방법들을 알아보자`](./section_03_06.md#5-hashmap-객체의-값을-확인하는-다른-방법들을-알아보자)
 - [`6. 정렬된 키의 목록을 원한다면 TreeMap 을 사용하자`](./section_03_06.md#6-정렬된-키의-목록을-원한다면-treemap-을-사용하자)
 
-- [`7. Map 을 구현한 Properties 클래스는 알아두면 편리하다`]()
-- `8. 자바의 자료 구조를 정리해보자`
-- `9. 정리하며`
-
+- [`7. Map 을 구현한 Properties 클래스는 알아두면 편리하다`](./section_07.md#7-map-을-구현한-properties-클래스는-알아두면-편리하다)
 
 ---
 
 ### What I learned from this chapter
 
+이번 챕터에는 `Map<K,V>` `interface` 와 이를 구현한 클래스를 알아보았다.
 
+애초에 `Map` `interface` 가 `key-value` 를 쌍으로 저장하려는 목적이 있다보니, `Set` 과 겹치는 부분이 존재했다. `(HashSet <--> HashMap || TreeSet <--> TreeMap 등)`
+
+또한 [`(CH 6.6)`](./section_03_06.md#6-정렬된-키의-목록을-원한다면-treemap-을-사용하자) 에서 `TreeMap(Comparator<? super K> comparator)` 와 같은 생성자를 알아보았는데, `Comparator` 를 이용해 순서를 지정시키는 방법은 좀 더 연습이 필요할 것 같다.
+
+더불어 이번 챕터의 [`직접해봅시다`](./code/README.md) 를 풀며 문제가 참 아쉬운 부분이 있어 유감스러웠다.
 
 ---

@@ -217,7 +217,7 @@ class java.lang.Object          0x58644d46      0x58644d46
 
 사실 우리가 이전에 배웠던 `Set`, `List`, 심지어 `Map` `interface` 는 `JDK 1.2` 부터 추가되었다. 왜냐면 `Java` 의 핵심 `framework` 중 하나인 `Collection Framework` 가 `JDK 1.2` 부터 추가되었기 때문이다.
 
-하지만 `Hashtable` 클래스는 `JDK 1.0` 부터 존재한 클래스이다. 버전이 상향되면 `Map` `interface` 를 구현하도록 바뀌었지만 핵심은 `오래된 코드` `(legacy code)` 라는 것이다.
+하지만 `Hashtable` 클래스는 `JDK 1.0` 부터 존재한 클래스이다. 버전이 상향되며 `Map` `interface` 를 구현하도록 바뀌었지만 핵심은 `오래된 코드` `(legacy code)` 라는 것이다.
 
 때문에 `Hashtable` 클래스는 이전 접했던 클래스와 조금 차이가 존재하는 것이다.
 
