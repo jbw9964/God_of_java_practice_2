@@ -71,7 +71,7 @@ class ThreadExtends extends Thread  {
 
 이번 `section` 에서는 스레드의 속성을 확인하고 지정하는 메서드를 알아보겠다.
 
-|`Modifier and Type`|`Method`|`Description`|
+|`Type`|`Method`|`Description`|
 |---|---|---|
 |`void`|`run()`|스레드가 수행할 작업 `(Runnable)` 이 명시된 메서드. 만약 지정된 작업이 없으면 아무것도 수행하지 않는다.|
 |`long`|`getId()`|스레드의 고유 `ID` 를 반환한다. `Java 19` 부터 `Deprececated` 되었다.|
